@@ -16,7 +16,7 @@ const Lista = (props: ListaProfessores) => {
                         <Foto src={professor.foto}></Foto>
                         <Informacoes>
                             <Nome>{professor.nome}</Nome>
-                            <Valor>R$ {professor.valor_hora} por hora</Valor>
+                            <Valor>{professor.valor_hora.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} por hora</Valor>
                             <br />
                             <Descricao>{professor.descricao}</Descricao>
                             <br />
@@ -28,7 +28,7 @@ const Lista = (props: ListaProfessores) => {
             ) : (
                 <ListaVazia>Nenhum item encontrado</ListaVazia>
             )}
-            </div>    
+        </div>    
     )
 }
 
