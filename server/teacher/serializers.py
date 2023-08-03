@@ -17,4 +17,3 @@ class AulaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Aula
         fields = '__all__'
-
