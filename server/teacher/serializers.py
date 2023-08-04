@@ -15,7 +15,7 @@ class CadastrarAulaSerializer(serializers.Serializer):
 
     def validate_nome(self, value):
         if len(value) < 3:
-            raise ValidationError('Deve ter pelo menos 4 caracteres')
+            raise ValidationError('Deve ter pelo menos 3 caracteres')
         return value
 
 
