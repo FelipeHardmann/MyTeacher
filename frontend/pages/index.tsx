@@ -7,8 +7,6 @@ export default function Home() {
   const { listaProfessores } = useIndex()
   
   return (
-    // <Box sx={{ backgroundColor: 'secondary.main' }}>
       <Lista professores={listaProfessores}></Lista>
-    // </Box>
   )
 }
