@@ -5,6 +5,7 @@ import { FormatadorService } from "@/src/services/FormatadorService"
 
 interface ListaProfessores {
     professores: Professor[],
+    onSelect: (professor: Professor) => void
 }
 
 const Lista = (props: ListaProfessores) => {
@@ -21,7 +22,7 @@ const Lista = (props: ListaProfessores) => {
                             <br />
                             <Descricao>{FormatadorService.limitarTexto(professor.descricao, 200)}</Descricao>
                             <br />
-                            <Button sx={{width: '70%'}}>Marcar Aula com Felipe</Button>
+                            <Button onClick={() => props.onSelect(professor)} sx={{width: '70%'}}>Marcar Aula com {professor.nome}</Button>
                         </Informacoes>
                     </ItemLista>
                     ))}
