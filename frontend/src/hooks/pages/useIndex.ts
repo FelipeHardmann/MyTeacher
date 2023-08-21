@@ -14,6 +14,10 @@ export function useIndex(){
             setListaProfessores(resposta.data)
         })
     }, [])
+
+    useEffect(() => {
+        limparForm()
+    }, [professorSelecionado])
     
     function marcarAula(){
         if(professorSelecionado !== null){
@@ -35,6 +39,11 @@ export function useIndex(){
 
     function validarDadosAula(){
         return nome.length > 0 && email.length > 0
+    }
+
+    function limparForm(){
+        setNome('')
+        setEmail('')
     }
 
     return {
